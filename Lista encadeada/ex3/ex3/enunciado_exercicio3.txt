@@ -1,0 +1,72 @@
+
+Enunciado do Exercício 3
+
+Objetivo:
+Este exercício tem como objetivo a criação de uma lista encadeada de alunos a partir de dados fornecidos em um arquivo de texto. A lista encadeada deve armazenar o nome completo, idade e matrícula dos alunos. Além disso, o programa deve permitir a visualização da lista e o armazenamento dessa lista em um arquivo binário.
+
+Descrição:
+
+1. Leitura do Arquivo de Entrada  
+Você deverá criar um programa que leia os dados de alunos de um arquivo de texto chamado entrada.txt. Cada linha deste arquivo contém os seguintes dados de um aluno:
+   
+   - Nome (completo, incluindo nome e sobrenome)
+   - Idade
+   - Matrícula
+   
+   O formato da linha no arquivo deve ser:
+   <nome> <sobrenome> <idade> <matricula>
+   
+   Exemplos de linhas no arquivo:
+   João Silva 20 12345
+   Maria Oliveira 22 54321
+   Pedro Souza 19 11223
+
+2. Estrutura de Dados  
+Você deve usar uma lista encadeada para armazenar os dados dos alunos. Cada nó da lista deve conter:
+   - Nome completo do aluno
+   - Idade
+   - Matrícula
+   - Ponteiro para o próximo aluno na lista
+   
+   A estrutura de dados que você deve usar é a seguinte:
+   
+   struct aluno {
+       char nome[51];
+       int idade;
+       int matricula;
+       struct aluno* proximo;
+   };
+   
+   typedef struct aluno Aluno;
+
+3. Funções a serem implementadas  
+O programa deve implementar as seguintes funções:
+   
+   - criar_lista: Inicializa a lista vazia.
+   - insere_lista: Insere um aluno na lista encadeada.
+   - criar_lista_encadeada: Cria a lista de alunos a partir do arquivo entrada.txt.
+   - salvararqbin: Salva a lista de alunos em um arquivo binário chamado estudantes.dat.
+   - imprimelista: Exibe a lista de alunos na tela.
+   
+4. Fluxo de Execução  
+O programa deve ter o seguinte fluxo:
+   - Carregar a lista de alunos a partir do arquivo entrada.txt.
+   - Perguntar ao usuário se ele deseja visualizar a lista de alunos ou salvar a lista em um arquivo binário.
+   - Se o usuário escolher visualizar, exibir os dados de cada aluno.
+   - Se o usuário escolher salvar, escrever os dados no arquivo binário estudantes.dat.
+   - O programa deve ser capaz de lidar com erros ao abrir arquivos ou alocar memória, exibindo mensagens de erro apropriadas.
+
+5. Requisitos  
+   - O programa deve ser escrito em C.
+   - As alocações de memória devem ser feitas corretamente e a memória deve ser liberada no final.
+   - O programa deve verificar se o arquivo entrada.txt foi aberto corretamente.
+   - O arquivo binário deve ser gravado corretamente.
+
+6. Desafios Extras (opcional)  
+   - Adicionar um recurso para editar os dados de um aluno na lista.
+   - Permitir que o usuário adicione novos alunos à lista.
+
+Instruções:
+- Implemente todas as funções conforme descrito no enunciado.
+- Certifique-se de testar o código com diferentes entradas no arquivo de texto para garantir que ele funcione corretamente.
+- A documentação do código é importante, então comente as funções e partes do código que possam ser mais complexas.

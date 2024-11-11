@@ -1,0 +1,26 @@
+Exercício 4: Manipulação de Listas Encadeadas com Arquivos de Texto
+Nível: Intermediário
+Objetivo: Trabalhar com alocação dinâmica, listas encadeadas e manipulação de arquivos de texto.
+
+Enunciado:
+Implemente um programa em C que leia informações de livros a partir de um arquivo de texto e armazene essas informações em uma lista encadeada. 
+Cada linha do arquivo de texto contém o título do livro, o nome do autor e o ano de publicação.
+
+O programa deve permitir que o usuário escolha entre as seguintes opções:
+
+1. Exibir todos os livros na tela.
+2. Exibir o número de livros publicados após um ano informado pelo usuário.
+3. Exibir o título e autor do livro mais recente.
+
+Entrada do arquivo livros.txt:
+
+O Hobbit; J.R.R. Tolkien; 1937
+Dom Casmurro; Machado de Assis; 1899
+1984; George Orwell; 1949
+
+Requisitos:
+- O programa deve usar uma lista encadeada para armazenar os livros.
+- Deve ser possível inserir os dados de forma dinâmica e interativa.
+- Ao final, a memória deve ser liberada.
+- O programa deve realizar operações de leitura de arquivos de texto e manipulação de listas encadeadas.
+
