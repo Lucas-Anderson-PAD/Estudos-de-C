@@ -1,0 +1,67 @@
+Exercício 6: Sistema de Vendas com Arquivos Binários e Listas Encadeadas
+
+Descrição do Exercício:
+Você foi encarregado de desenvolver um sistema simples para gerenciar produtos em um arquivo binário. O programa deve funcionar da seguinte maneira:
+
+O sistema deve armazenar os dados dos produtos em um arquivo binário chamado produtos.dat. O formato do produto inclui:
+
+Código do produto (inteiro)
+Nome do produto (string)
+Preço do produto (float)
+Ao iniciar, o programa deve perguntar ao usuário qual operação deseja realizar:
+
+Exibir os produtos: Mostra todos os produtos armazenados no arquivo.
+Adicionar novos produtos: Permite ao usuário inserir múltiplos produtos e armazená-los no arquivo. O programa deve perguntar se o usuário deseja sobrescrever o arquivo ou adicionar os novos produtos ao final do arquivo.
+Excluir um produto: Permite ao usuário excluir um produto, dado o seu código, e atualizar o arquivo com os dados restantes.
+Ao adicionar novos produtos ao arquivo, o programa deve perguntar ao usuário se ele deseja sobrescrever o arquivo existente ou adicionar ao final do arquivo. Se a opção for sobrescrever, o arquivo será reescrito completamente; se for adicionar, os novos produtos serão incluídos no final do arquivo, sem apagar os produtos existentes.
+
+Requisitos Técnicos:
+
+Utilize a função fopen para abrir o arquivo no modo adequado ("wb" para sobrescrever ou "ab" para adicionar).
+Use o operador ternário ? : para decidir qual modo de abertura do arquivo será utilizado.
+O arquivo de produtos deve ser lido e escrito em formato binário, utilizando a função fwrite para salvar os produtos e fread para carregar os produtos.
+
+...
+Nível: Superior
+Objetivo: Manipulação avançada de arquivos binários, listas encadeadas e alocação dinâmica com operações complexas.
+
+Enunciado:
+Implemente um programa em C para gerenciar um sistema de vendas em uma loja de eletrônicos. 
+O sistema deve armazenar informações sobre vendas de produtos, sendo que cada venda tem um código de produto, o nome do cliente,
+a data da venda e a quantidade comprada.
+
+Os dados das vendas e dos produtos devem ser armazenados em arquivos binários separados. O programa deve permitir que o usuário:
+
+1. Adicione uma venda ao sistema.
+2. Exiba todas as vendas de um determinado produto.
+3. Exiba as vendas realizadas por um cliente específico.
+4. Calcule o total vendido de um produto (quantidade * preço).
+5. Salve os dados de vendas em um arquivo binário e leia de volta, mantendo a lista de vendas atualizada.
+
+A estrutura dos dados será a seguinte:
+
+typedef struct Produto {
+    int codigo;
+    char nome[100];
+    float preco;
+} Produto;
+
+typedef struct Venda {
+    Produto produto;
+    char cliente[100];
+    char data[11];  // Formato: DD/MM/AAAA
+    int quantidade;
+    struct Venda* proximo;
+} Venda;
+
+Entrada do arquivo produtos.dat (binário):
+- O arquivo contém a lista de produtos com suas informações (código, nome e preço).
+
+Entrada do arquivo vendas.dat (binário):
+- O arquivo contém a lista de vendas, com as informações de produto, cliente, data e quantidade.
+
+Requisitos:
+- Manipulação de arquivos binários e de listas encadeadas.
+- Operações de adição, busca e cálculo de vendas.
+- O programa deve manter a integridade dos dados, permitindo atualizações e leituras dinâmicas.
+- A memória alocada deve ser liberada corretamente no final.

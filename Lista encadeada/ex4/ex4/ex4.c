@@ -141,16 +141,18 @@ void saida() {
 		scanf("%d", &ano);
 
 		posano = livros_apos_ano(ano, livros);
+		printf("Número de livros publicados após o ano %d: %d\n", ano, posano);  // Correção: Exibido o resultado para o usuário
+
 	}
 	else if (resp1 == 3) {
 		recente = livro_mais_recente(livros);
 
 		printf("O livro mais recente é :\n");
-		printf("%s, de %s", recente->titulo,recente->nome);
+		printf("%s, de %s\n", recente->titulo,recente->nome);
 	}
 	else {
-		while (resp2 != 1 || resp2 != 0) {
-			printf("resposta invalida deseja\nDeseja tentar novamente\n dite 1 para sim e 0 para não");
+		while (resp2 != 1 && resp2 != 0) {
+			printf("resposta invalida deseja\nDeseja tentar novamente\n dite 1 para sim e 0 para não\n");
 			scanf("%d", &resp2);
 
 			if (resp2==1) {

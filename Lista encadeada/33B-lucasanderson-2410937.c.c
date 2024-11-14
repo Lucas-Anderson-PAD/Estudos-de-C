@@ -49,7 +49,6 @@ int main (void)
     printf("\n...");
 
 
-    printf("%d", maiorMatricula(lal));
 
     lal_i= (Aluno*)malloc(sizeof(Aluno));
 
@@ -65,6 +64,7 @@ int main (void)
 
 
     insereNaPosicao(lal,2,lal_i);
+    printf("%d", maiorMatricula(lal));
     lst_libera(lal); 
     lst_libera(lal_2); 
 
@@ -80,6 +80,7 @@ Aluno  * lst_insere(Aluno * l, int mat,char nome[21], float nota, char sexo ){
     Aluno  *novo;
 
     novo = (Aluno *)malloc(sizeof(Aluno));
+    
     if(novo == NULL){
         printf("Erro ao alocar a memoria");
         exit(1);
@@ -186,16 +187,16 @@ Aluno * quebraAoMeio(Aluno * lista){
         return NULL;
     }
 
-    if(metade % 2!=0){
+    if(n % 2!=0){
         metade ++;
     }
 
-    Aluno * proxlista= lista->prox;
+    Aluno * proxlista= lista;
 
     int cont = 0;
     while(cont!=metade){
         cont ++;
-        lista = lista->prox;
+        lista = proxlista;
         proxlista= proxlista->prox;
     }
 
@@ -206,11 +207,15 @@ Aluno * quebraAoMeio(Aluno * lista){
 
 Aluno * fazCopia(Aluno * lista){
     Aluno * novalista = NULL;
+    
     if(lista == NULL){
         return novalista;
     }
     novalista = (Aluno *)malloc(sizeof(Aluno));
 
+    if(novalista == NULL){
+        exit (1);
+    }
 
     strcpy(novalista->nome,lista->nome);
     novalista->mat=lista->mat;

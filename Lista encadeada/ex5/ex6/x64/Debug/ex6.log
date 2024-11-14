@@ -1,0 +1,11 @@
+﻿cl : linha de comando  warning D9025: substituindo '/sdl' com '/GS-'
+  ex6.c
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(35,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(71,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(84,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(88,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(90,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(102,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(103,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\ex6\ex6.c(159,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ex6.vcxproj -> C:\Users\lucas\Desktop\estudos\2 Periodo\C\G2\Lista encadeada\ex6\x64\Debug\ex6.exe
